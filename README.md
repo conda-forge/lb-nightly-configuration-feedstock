@@ -1,11 +1,11 @@
-About lb-nightly-configuration
-==============================
+About lb-nightly-configuration-feedstock
+========================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lb-nightly-configuration-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/lb-nightly-configuration/
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lb-nightly-configuration-feedstock/blob/main/LICENSE.txt)
 
 Summary: classes and functions to suppot the LHCb Nightly Build System configuration
 
@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@maszyman](https://github.com/maszyman/)
+* [@pikacic](https://github.com/pikacic/)
 
