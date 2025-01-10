@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 31ea4730402740b556f85946119d46ac1a5974195283dccf1171176e5a4f532d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - lbn-check-config = lb.nightly.configuration:check_config
@@ -21,11 +21,11 @@ requirements:
   host:
     - pip
     - poetry-core >=1.0.0
-    - python >=3.6,<4.0
+    - python {{ python_min }}
   run:
     - configurator >=2.6.0,<3.0.0
     - gitpython >=3.1.18,<4.0.0
-    - python >=3.6,<4.0
+    - python >={{ python_min }},<4.0
     - pyyaml >=6.0,<7.0
     - tabulate >=0.8.9,<0.9.0
 
@@ -38,6 +38,7 @@ test:
     - lbn-check-config --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/lb-nightly-configuration/
